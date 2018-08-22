@@ -25,17 +25,25 @@
  ;; If there is more than one, they won't work right.
  
  ;; neotree
- '(neo-file-link-face ((t (:foreground "brightred")))))
+ '(neo-file-link-face ((t (:foreground "x")))) ;; default terminal text colour
+ '(neo-dir-link-face ((t (:foreground "brightred"))))
+ )
 (setq neo-autorefresh nil)
 
 ;; web-mode
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
 (setq web-mode-content-types-alist
       '(("jsx"  . "\\.js\\'")))
 
 ;; tab stuff
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+(setq ruby-insert-encoding-magic-comment nil)
+(neotree)

@@ -26,9 +26,9 @@
  
  ;; neotree
  '(neo-file-link-face ((t (:foreground "x")))) ;; default terminal text colour
- '(neo-dir-link-face ((t (:foreground "brightred"))))
- )
+ '(neo-dir-link-face ((t (:foreground "brightred")))))
 (setq neo-autorefresh nil)
+(setq-default neo-show-hidden-files t)
 
 ;; web-mode
 (setq web-mode-code-indent-offset 2)
